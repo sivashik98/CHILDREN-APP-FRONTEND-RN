@@ -12,6 +12,10 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "lodash": "^4.17.20",
+    "memoize": "^0.1.1",
+    "moment": "^2.27.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.13.1",
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-gesture-handler": "^1.7.0",
@@ -23,7 +27,8 @@
     "react-navigation-stack": "^2.8.2",
     "react-navigation-tabs": "^2.9.0",
     "react-redux": "^7.2.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "url-parse": "^1.4.7"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",

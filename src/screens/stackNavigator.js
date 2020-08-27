@@ -1,10 +1,10 @@
-import RoleScreen from './Role';
-import CodeScreen from './Code';
-import ChildScreen from './Child';
+import RegistrationScreen from './Auth/Registration/Registration';
+import PairingChildScreen from './Auth/Pairing/PairingChild';
+import PairingParentScreen from './Auth/Pairing/PairingParent';
 import {createStackNavigator} from 'react-navigation-stack';
 
 export const stackNavigator = createStackNavigator({
-  Role: RoleScreen,
-  Code: CodeScreen,
-  Child: ChildScreen,
+  Registration: RegistrationScreen,
+  PairingChild: PairingChildScreen,
+  PairingParent: PairingParentScreen,
 });

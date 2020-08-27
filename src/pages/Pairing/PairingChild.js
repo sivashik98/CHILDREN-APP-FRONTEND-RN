@@ -1,14 +1,16 @@
 import * as React from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
 
-export default class ChildScreen extends React.PureComponent {
+export default class PairingChild extends React.PureComponent {
   state = {
     code: '',
   };
 
-  handleChangeText = (code) => {
-    //Тут я считаю количество символов и как только тут достигает 7 я должен пушить запрос в бд и сравнивать код.
+  handleChangeCode = (code) => {
     this.setState({code});
+
+    if (code.length === 8) {
+    }
   };
 
   render() {
@@ -20,9 +22,10 @@ export default class ChildScreen extends React.PureComponent {
 
         <TextInput
           value={code}
-          onChangeText={this.handleChangeText}
-          maxLength={7}
-          style={styles.child_input}
+          onChangeText={this.handleChangeCode}
+          autoCapitalize="characters"
+          maxLength={8}
+          style={styles.child__input}
         />
       </View>
     );
@@ -34,8 +37,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(181,0,211,0.4)',
-    padding: 25,
+    backgroundColor: 'rgba(211,0,59,0.4)',
+    padding: 10,
   },
 
   child__text: {
@@ -43,14 +46,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 
-  child_input: {
+  child__input: {
     marginTop: 20,
     borderWidth: 2,
     width: '50%',
     fontSize: 26,
     color: '#fff',
     padding: 15,
-    letterSpacing: 2,
-    // textTransform: 'uppercase',
+    letterSpacing: 2.5,
   },
 });
